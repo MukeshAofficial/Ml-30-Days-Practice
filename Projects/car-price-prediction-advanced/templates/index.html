@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <style>
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 500px;
+            width:100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #FFFFFF;
+            color: #000;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            color: #000;
+        }
+        input, button {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            border-color: #000;
+            width: 90%;
+        }
+        button {
+            cursor: pointer;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/predict" method="post">
+            <h1>Car Price Prediction</h1>
+            <label for="year">Year</label>
+            <input type="text" id="year" name="year">
+            <label for="present_price">Present Price (in lakhs):</label>
+            <input type="text" id="present_price" name="present_price">
+            <label for="kms_driven">Kilometers Driven:</label>
+            <input type="text" id="kms_driven" name="kms_driven">
+            <label for="fuel_type">Fuel Type (0: Petrol, 1: Diesel, 2: CNG):</label>
+            <input type="text" id="fuel_type" name="fuel_type">
+            <label for="owner">Owner</label>
+            <input type="text" id="owner" name="owner">
+            <label for="seller_type">Seller Type (0: Dealer, 1: Individual):</label>
+            <input type="text" id="seller_type" name="seller_type">
+            <label for="transmission_type">Transmission Type (0: Manual, 1: Automatic):</label>
+            <input type="text" id="transmission_type" name="transmission_type">
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
